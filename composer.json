@@ -1,15 +1,20 @@
 {
-    "name": "baohx2000/apitest",
-    "description": "Test application for apitude",
-    "authors": [
-        {
-            "name": "Gordon Forsythe",
-            "email": "baohx2000@gmail.com"
-        }
-    ],
-    "prefer-stable": true,
-    "minimum-stability": "dev",
-    "require": {
-        "baohx2000/apitude": "dev-master"
+  "name"              : "baohx2000/apitest",
+  "description"       : "Test application for apitude",
+  "authors"           : [
+    {
+      "name"  : "Gordon Forsythe",
+      "email" : "baohx2000@gmail.com"
     }
+  ],
+  "prefer-stable"     : true,
+  "minimum-stability" : "dev",
+  "require"           : {
+    "baohx2000/apitude" : "dev-master"
+  },
+  "autoload"          : {
+    "psr-4" : {
+      "Apitest\\" : "src/"
+    }
+  }
 }
