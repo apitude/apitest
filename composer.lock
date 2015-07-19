@@ -12,12 +12,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/baohx2000/apitude.git",
-                "reference": "9035718b3f5776051335b33b799a8e4b178f68c6"
+                "reference": "5e5a6f8361f2951957a332f33ffc7cef5abc60eb"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/baohx2000/apitude/zipball/9035718b3f5776051335b33b799a8e4b178f68c6",
-                "reference": "9035718b3f5776051335b33b799a8e4b178f68c6",
+                "url": "https://api.github.com/repos/baohx2000/apitude/zipball/5e5a6f8361f2951957a332f33ffc7cef5abc60eb",
+                "reference": "5e5a6f8361f2951957a332f33ffc7cef5abc60eb",
                 "shasum": ""
             },
             "require": {
@@ -52,7 +52,7 @@
                 }
             ],
             "description": "Yet another API framework",
-            "time": "2015-07-19 08:12:31"
+            "time": "2015-07-19 09:01:57"
         },
         {
             "name": "dbtlr/silex-doctrine-migrations",

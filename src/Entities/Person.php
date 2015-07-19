@@ -2,6 +2,7 @@
 namespace Apitest\Entities;
 
 use B2k\Apitude\Entities\User;
+use B2k\Apitude\EntityStubs\StampEntityTrait;
 use Doctrine\ORM\Mapping as ORM;
 
 /**
@@ -12,6 +13,8 @@ use Doctrine\ORM\Mapping as ORM;
  */
 class Person
 {
+    use StampEntityTrait;
+
     /**
      * @var int
      * @ORM\Id
