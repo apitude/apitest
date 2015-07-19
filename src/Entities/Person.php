@@ -2,6 +2,7 @@
 namespace Apitest\Entities;
 
 use B2k\Apitude\Entities\User;
+use B2k\Apitude\EntityStubs\StampEntityInterface;
 use B2k\Apitude\EntityStubs\StampEntityTrait;
 use Doctrine\ORM\Mapping as ORM;
 
@@ -11,7 +12,7 @@ use Doctrine\ORM\Mapping as ORM;
  * @ORM\Entity
  * @ORM\Table(name="persons")
  */
-class Person
+class Person implements StampEntityInterface
 {
     use StampEntityTrait;
 
@@ -42,6 +43,13 @@ class Person
      */
     private $user;
 
+    /**
+     * @return int
+     */
+    public function getId()
+    {
+        return $this->id;
+    }
 
     /**
      * Set firstName

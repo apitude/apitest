@@ -1,5 +1,11 @@
 <?php
+
+use B2k\Apitude\EntityServices\StampSubscriber;
+
 return [
+    'configuration.services' => [
+        // [class => config]
+    ],
     // Database connection options
     'db.options' => [
         'driver' => 'pdo_mysql',
@@ -28,13 +34,21 @@ return [
             ]
         ]
     ],
+    'orm.subscribers' => [
+        StampSubscriber::class,
+    ],
     // Note that Migrations is NOT inside src.  This is because it does not and should not
     // contain any application logic, and therefore is separate from the application.
     'migrations.directory' => APP_PATH.'/Migrations',
 
     'service_providers' => [
+        \Apitest\Provider\ApitestProvider::class => [],
         // add class names of other service providers you wish to register here
         // as keys, and configuration you wish to be passed to them as the value.
         // example : MyServiceProvider::class => ['configKey' => 37, ...]
+    ],
+
+    'commands' => [
+        \Apitest\Commands\MakePerson::class => [],
     ]
 ];
