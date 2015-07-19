@@ -12,16 +12,19 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/baohx2000/apitude.git",
-                "reference": "9ef870198aa2fe83b7aabf33543041ee26660e4d"
+                "reference": "9035718b3f5776051335b33b799a8e4b178f68c6"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/baohx2000/apitude/zipball/9ef870198aa2fe83b7aabf33543041ee26660e4d",
-                "reference": "9ef870198aa2fe83b7aabf33543041ee26660e4d",
+                "url": "https://api.github.com/repos/baohx2000/apitude/zipball/9035718b3f5776051335b33b799a8e4b178f68c6",
+                "reference": "9035718b3f5776051335b33b799a8e4b178f68c6",
                 "shasum": ""
             },
             "require": {
-                "baohx2000/doc": "v0.1.0",
+                "dbtlr/silex-doctrine-migrations": "dev-master",
+                "dflydev/doctrine-orm-service-provider": "~1",
+                "doctrine/migrations": "~1",
+                "doctrine/orm": "~2",
                 "jms/metadata": "~1",
                 "silex/silex": "~1"
             },
@@ -49,36 +52,36 @@
                 }
             ],
             "description": "Yet another API framework",
-            "time": "2015-07-04 01:04:10"
+            "time": "2015-07-19 08:12:31"
         },
         {
-            "name": "baohx2000/doc",
-            "version": "v0.1.0",
+            "name": "dbtlr/silex-doctrine-migrations",
+            "version": "dev-master",
             "source": {
                 "type": "git",
-                "url": "https://github.com/baohx2000/doc.git",
-                "reference": "f8e02cc7c25fd2f15e4787336151edf05c166e46"
+                "url": "https://github.com/dbtlr/silex-doctrine-migrations.git",
+                "reference": "126a6901b831be4f3bc168b77134ed79a567d6a7"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/baohx2000/doc/zipball/f8e02cc7c25fd2f15e4787336151edf05c166e46",
-                "reference": "f8e02cc7c25fd2f15e4787336151edf05c166e46",
+                "url": "https://api.github.com/repos/dbtlr/silex-doctrine-migrations/zipball/126a6901b831be4f3bc168b77134ed79a567d6a7",
+                "reference": "126a6901b831be4f3bc168b77134ed79a567d6a7",
                 "shasum": ""
             },
             "require": {
-                "dflydev/doctrine-orm-service-provider": "~1",
+                "doctrine/dbal": "~2.5",
                 "doctrine/migrations": "1.0.*@dev",
-                "saxulum/saxulum-console": "~1",
-                "saxulum/saxulum-doctrine-orm-manager-registry-provider": "~2"
+                "knplabs/console-service-provider": "~1.0",
+                "php": ">=5.3.2",
+                "silex/silex": "~1.2"
             },
-            "require-dev": {
-                "phpunit/phpunit": "4.6.4",
-                "silex/silex": "~1"
+            "suggest": {
+                "dflydev/doctrine-orm-service-provider": "1.0.x-dev"
             },
             "type": "library",
             "autoload": {
                 "psr-4": {
-                    "B2k\\Doc\\": "src/"
+                    "Dbtlr\\MigrationProvider\\": "src/"
                 }
             },
             "notification-url": "https://packagist.org/downloads/",
@@ -87,12 +90,18 @@
             ],
             "authors": [
                 {
-                    "name": "Gordon Forsythe",
-                    "email": "baohx2000@gmail.com"
+                    "name": "Drew Butler",
+                    "homepage": "http://dbtlr.com"
                 }
             ],
-            "description": "Doctrine provider for Silex",
-            "time": "2015-06-05 13:54:46"
+            "description": "Doctrine migration service provider for Silex",
+            "homepage": "http://github.com/dbtlr/silex-doctrine-migrations",
+            "keywords": [
+                "doctrine2",
+                "migration",
+                "silex"
+            ],
+            "time": "2015-05-22 12:05:26"
         },
         {
             "name": "dflydev/doctrine-orm-service-provider",
@@ -873,6 +882,48 @@
             "time": "2014-07-12 07:13:19"
         },
         {
+            "name": "knplabs/console-service-provider",
+            "version": "v1.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/KnpLabs/ConsoleServiceProvider.git",
+                "reference": "1f1a3315409814d01702a47a8823549c6996de41"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/KnpLabs/ConsoleServiceProvider/zipball/1f1a3315409814d01702a47a8823549c6996de41",
+                "reference": "1f1a3315409814d01702a47a8823549c6996de41",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.3.2",
+                "symfony/console": "~2.1"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-0": {
+                    "Knp\\": ""
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Knplabs",
+                    "homepage": "http://knplabs.com"
+                }
+            ],
+            "description": "console service provider for Silex",
+            "homepage": "http://knplabs.com",
+            "keywords": [
+                "console",
+                "silex"
+            ],
+            "time": "2013-06-13 12:43:39"
+        },
+        {
             "name": "pimple/pimple",
             "version": "v1.1.1",
             "source": {
@@ -955,163 +1006,6 @@
                 "psr-3"
             ],
             "time": "2012-12-21 11:40:51"
-        },
-        {
-            "name": "saxulum/saxulum-classfinder",
-            "version": "1.0.1",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/saxulum/saxulum-classfinder.git",
-                "reference": "bfbea064f48c661ffb53d433a629acc5b62bd1d5"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/saxulum/saxulum-classfinder/zipball/bfbea064f48c661ffb53d433a629acc5b62bd1d5",
-                "reference": "bfbea064f48c661ffb53d433a629acc5b62bd1d5",
-                "shasum": ""
-            },
-            "require": {
-                "php": ">=5.3.3"
-            },
-            "require-dev": {
-                "phpunit/phpunit": "3.7.*"
-            },
-            "type": "library",
-            "autoload": {
-                "psr-0": {
-                    "Saxulum\\ClassFinder": "src/"
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "Dominik Zogg",
-                    "email": "dominik.zogg@gmail.com"
-                }
-            ],
-            "description": "Saxulum ClassFinder",
-            "keywords": [
-                "class",
-                "classfinder"
-            ],
-            "time": "2014-01-30 20:05:57"
-        },
-        {
-            "name": "saxulum/saxulum-console",
-            "version": "1.2.0",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/saxulum/saxulum-console.git",
-                "reference": "f0f82d5577b0b96541b13a9cbe2f4b4d19f587c4"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/saxulum/saxulum-console/zipball/f0f82d5577b0b96541b13a9cbe2f4b4d19f587c4",
-                "reference": "f0f82d5577b0b96541b13a9cbe2f4b4d19f587c4",
-                "shasum": ""
-            },
-            "require": {
-                "php": ">=5.3.3",
-                "pimple/pimple": "~1.0",
-                "saxulum/saxulum-classfinder": "~1.0.1",
-                "symfony/console": "~2.3",
-                "symfony/finder": "~2.3"
-            },
-            "require-dev": {
-                "phpunit/phpunit": "3.7.*",
-                "silex/silex": "~1.1"
-            },
-            "type": "library",
-            "autoload": {
-                "psr-0": {
-                    "Saxulum\\Console": "src/"
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "Dominik Zogg",
-                    "email": "dominik.zogg@gmail.com"
-                }
-            ],
-            "description": "Saxulum Console Provider",
-            "keywords": [
-                "cilex",
-                "console",
-                "pimple",
-                "saxulum",
-                "silex"
-            ],
-            "time": "2014-01-30 20:41:31"
-        },
-        {
-            "name": "saxulum/saxulum-doctrine-orm-manager-registry-provider",
-            "version": "2.2.1",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/saxulum/saxulum-doctrine-orm-manager-registry-provider.git",
-                "reference": "04844c8ab040c1a4b1117d74225a5cc7afa37fce"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/saxulum/saxulum-doctrine-orm-manager-registry-provider/zipball/04844c8ab040c1a4b1117d74225a5cc7afa37fce",
-                "reference": "04844c8ab040c1a4b1117d74225a5cc7afa37fce",
-                "shasum": ""
-            },
-            "require": {
-                "dflydev/doctrine-orm-service-provider": "~1.0.4",
-                "php": ">=5.3.3",
-                "pimple/pimple": "~1.0"
-            },
-            "require-dev": {
-                "phpunit/phpunit": "3.7.*",
-                "saxulum/saxulum-console": "~2.0",
-                "saxulum/saxulum-doctrine-orm-commands": "~1.2",
-                "silex/silex": "~1.2",
-                "symfony/doctrine-bridge": "~2.2",
-                "symfony/form": "~2.2",
-                "symfony/validator": "~2.2"
-            },
-            "suggest": {
-                "saxulum/saxulum-console": "~2.0",
-                "saxulum/saxulum-doctrine-orm-commands": "~1.2",
-                "silex/silex": "~1.2",
-                "symfony/doctrine-bridge": "~2.2",
-                "symfony/form": "~2.2",
-                "symfony/validator": "~2.2"
-            },
-            "type": "library",
-            "autoload": {
-                "psr-0": {
-                    "Saxulum\\DoctrineOrmManagerRegistry": "src/"
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "Dominik Zogg",
-                    "email": "dominik.zogg@gmail.com"
-                }
-            ],
-            "description": "Saxulum Doctrine ORM Manager Registry Provider",
-            "keywords": [
-                "cilex",
-                "doctrine",
-                "orm",
-                "pimple",
-                "registrymanager",
-                "silex"
-            ],
-            "time": "2015-05-29 05:19:57"
         },
         {
             "name": "silex/silex",
@@ -1197,16 +1091,16 @@
         },
         {
             "name": "symfony/console",
-            "version": "v2.7.1",
+            "version": "v2.7.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/Console.git",
-                "reference": "564398bc1f33faf92fc2ec86859983d30eb81806"
+                "reference": "8cf484449130cabfd98dcb4694ca9945802a21ed"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/Console/zipball/564398bc1f33faf92fc2ec86859983d30eb81806",
-                "reference": "564398bc1f33faf92fc2ec86859983d30eb81806",
+                "url": "https://api.github.com/repos/symfony/Console/zipball/8cf484449130cabfd98dcb4694ca9945802a21ed",
+                "reference": "8cf484449130cabfd98dcb4694ca9945802a21ed",
                 "shasum": ""
             },
             "require": {
@@ -1250,20 +1144,20 @@
             ],
             "description": "Symfony Console Component",
             "homepage": "https://symfony.com",
-            "time": "2015-06-10 15:30:22"
+            "time": "2015-07-09 16:07:40"
         },
         {
             "name": "symfony/debug",
-            "version": "v2.7.1",
+            "version": "v2.7.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/Debug.git",
-                "reference": "075070230c5bbc65abde8241191655bbce0716e2"
+                "reference": "9daa1bf9f7e615fa2fba30357e479a90141222e3"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/Debug/zipball/075070230c5bbc65abde8241191655bbce0716e2",
-                "reference": "075070230c5bbc65abde8241191655bbce0716e2",
+                "url": "https://api.github.com/repos/symfony/Debug/zipball/9daa1bf9f7e615fa2fba30357e479a90141222e3",
+                "reference": "9daa1bf9f7e615fa2fba30357e479a90141222e3",
                 "shasum": ""
             },
             "require": {
@@ -1310,20 +1204,20 @@
             ],
             "description": "Symfony Debug Component",
             "homepage": "https://symfony.com",
-            "time": "2015-06-08 09:37:21"
+            "time": "2015-07-09 16:07:40"
         },
         {
             "name": "symfony/event-dispatcher",
-            "version": "v2.7.1",
+            "version": "v2.7.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/EventDispatcher.git",
-                "reference": "be3c5ff8d503c46768aeb78ce6333051aa6f26d9"
+                "reference": "9310b5f9a87ec2ea75d20fec0b0017c77c66dac3"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/EventDispatcher/zipball/be3c5ff8d503c46768aeb78ce6333051aa6f26d9",
-                "reference": "be3c5ff8d503c46768aeb78ce6333051aa6f26d9",
+                "url": "https://api.github.com/repos/symfony/EventDispatcher/zipball/9310b5f9a87ec2ea75d20fec0b0017c77c66dac3",
+                "reference": "9310b5f9a87ec2ea75d20fec0b0017c77c66dac3",
                 "shasum": ""
             },
             "require": {
@@ -1368,69 +1262,20 @@
             ],
             "description": "Symfony EventDispatcher Component",
             "homepage": "https://symfony.com",
-            "time": "2015-06-08 09:37:21"
-        },
-        {
-            "name": "symfony/finder",
-            "version": "v2.7.1",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/symfony/Finder.git",
-                "reference": "c13a40d638aeede1e8400f8c956c7f9246c05f75"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/symfony/Finder/zipball/c13a40d638aeede1e8400f8c956c7f9246c05f75",
-                "reference": "c13a40d638aeede1e8400f8c956c7f9246c05f75",
-                "shasum": ""
-            },
-            "require": {
-                "php": ">=5.3.9"
-            },
-            "require-dev": {
-                "symfony/phpunit-bridge": "~2.7"
-            },
-            "type": "library",
-            "extra": {
-                "branch-alias": {
-                    "dev-master": "2.7-dev"
-                }
-            },
-            "autoload": {
-                "psr-4": {
-                    "Symfony\\Component\\Finder\\": ""
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "Fabien Potencier",
-                    "email": "fabien@symfony.com"
-                },
-                {
-                    "name": "Symfony Community",
-                    "homepage": "https://symfony.com/contributors"
-                }
-            ],
-            "description": "Symfony Finder Component",
-            "homepage": "https://symfony.com",
-            "time": "2015-06-04 20:11:48"
+            "time": "2015-06-18 19:21:56"
         },
         {
             "name": "symfony/http-foundation",
-            "version": "v2.7.1",
+            "version": "v2.7.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/HttpFoundation.git",
-                "reference": "4f363c426b0ced57e3d14460022feb63937980ff"
+                "reference": "88903c0531b90d4ecd90282b18f08c0c77bde0b2"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/HttpFoundation/zipball/4f363c426b0ced57e3d14460022feb63937980ff",
-                "reference": "4f363c426b0ced57e3d14460022feb63937980ff",
+                "url": "https://api.github.com/repos/symfony/HttpFoundation/zipball/88903c0531b90d4ecd90282b18f08c0c77bde0b2",
+                "reference": "88903c0531b90d4ecd90282b18f08c0c77bde0b2",
                 "shasum": ""
             },
             "require": {
@@ -1470,20 +1315,20 @@
             ],
             "description": "Symfony HttpFoundation Component",
             "homepage": "https://symfony.com",
-            "time": "2015-06-10 15:30:22"
+            "time": "2015-07-09 16:07:40"
         },
         {
             "name": "symfony/http-kernel",
-            "version": "v2.7.1",
+            "version": "v2.7.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/HttpKernel.git",
-                "reference": "208101c7a11e31933183bd2a380486e528c74302"
+                "reference": "4a8a6f2a847475b3a38da50363a07f69b5cbf37e"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/HttpKernel/zipball/208101c7a11e31933183bd2a380486e528c74302",
-                "reference": "208101c7a11e31933183bd2a380486e528c74302",
+                "url": "https://api.github.com/repos/symfony/HttpKernel/zipball/4a8a6f2a847475b3a38da50363a07f69b5cbf37e",
+                "reference": "4a8a6f2a847475b3a38da50363a07f69b5cbf37e",
                 "shasum": ""
             },
             "require": {
@@ -1550,20 +1395,20 @@
             ],
             "description": "Symfony HttpKernel Component",
             "homepage": "https://symfony.com",
-            "time": "2015-06-11 21:15:28"
+            "time": "2015-07-13 19:27:49"
         },
         {
             "name": "symfony/routing",
-            "version": "v2.7.1",
+            "version": "v2.7.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/Routing.git",
-                "reference": "5581be29185b8fb802398904555f70da62f6d50d"
+                "reference": "ea9134f277162b02e5f80ac058b75a77637b0d26"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/Routing/zipball/5581be29185b8fb802398904555f70da62f6d50d",
-                "reference": "5581be29185b8fb802398904555f70da62f6d50d",
+                "url": "https://api.github.com/repos/symfony/Routing/zipball/ea9134f277162b02e5f80ac058b75a77637b0d26",
+                "reference": "ea9134f277162b02e5f80ac058b75a77637b0d26",
                 "shasum": ""
             },
             "require": {
@@ -1621,20 +1466,20 @@
                 "uri",
                 "url"
             ],
-            "time": "2015-06-11 17:20:40"
+            "time": "2015-07-09 16:07:40"
         },
         {
             "name": "symfony/yaml",
-            "version": "v2.7.1",
+            "version": "v2.7.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/Yaml.git",
-                "reference": "9808e75c609a14f6db02f70fccf4ca4aab53c160"
+                "reference": "4bfbe0ed3909bfddd75b70c094391ec1f142f860"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/Yaml/zipball/9808e75c609a14f6db02f70fccf4ca4aab53c160",
-                "reference": "9808e75c609a14f6db02f70fccf4ca4aab53c160",
+                "url": "https://api.github.com/repos/symfony/Yaml/zipball/4bfbe0ed3909bfddd75b70c094391ec1f142f860",
+                "reference": "4bfbe0ed3909bfddd75b70c094391ec1f142f860",
                 "shasum": ""
             },
             "require": {
@@ -1670,7 +1515,7 @@
             ],
             "description": "Symfony Yaml Component",
             "homepage": "https://symfony.com",
-            "time": "2015-06-10 15:30:22"
+            "time": "2015-07-01 11:25:50"
         }
     ],
     "packages-dev": [],

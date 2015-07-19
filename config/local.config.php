@@ -3,18 +3,25 @@ return [
     // Database connection options
     'db.options' => [
         'driver' => 'pdo_mysql',
-        'dbname' => 'apitude',
+        'dbname' => 'apitest',
         'user' => 'root',
         'password' => 'root',
         'host' => '127.0.0.1',
     ],
-    'doctrine.options' => [
+    'orm.options' => [
         'orm.proxies_dir' => APP_PATH.'/tmp/proxies',
         'orm.em.options' => [
+            'connection' => 'default',
             'mappings' => [
                 [
                     'type' => 'annotation',
-                    'namespace' => 'YOURAPPLICATION\Entities',
+                    'namespace' => 'B2k\Apitude\Entities',
+                    'path' => APP_PATH.'/vendor/baohx2000/apitude/src/Entities',
+                    'use_simple_annotation_reader' => false,
+                ],
+                [
+                    'type' => 'annotation',
+                    'namespace' => 'Apitest\Entities',
                     'path' => APP_PATH.'/src/Entities',
                     'use_simple_annotation_reader' => false,
                 ]
