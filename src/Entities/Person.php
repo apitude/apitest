@@ -1,6 +1,7 @@
 <?php
 namespace Apitest\Entities;
 
+use B2k\Apitude\Entities\AbstractEntity;
 use B2k\Apitude\Entities\User;
 use B2k\Apitude\EntityStubs\StampEntityInterface;
 use B2k\Apitude\EntityStubs\StampEntityTrait;
@@ -14,7 +15,7 @@ use B2k\Apitude\Annotations\API;
  * @ORM\Table(name="persons")
  * @API\Entity\Expose
  */
-class Person implements StampEntityInterface
+class Person extends AbstractEntity implements StampEntityInterface
 {
     use StampEntityTrait;
 
