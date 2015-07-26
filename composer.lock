@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "78d74a19e4cceb3cfd48149fbaf13845",
+    "hash": "edb0b35b3cfb41168e45d8de95fadf69",
     "packages": [
         {
             "name": "baohx2000/apitude",
@@ -12,12 +12,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/baohx2000/apitude.git",
-                "reference": "c6f0a836319ef72cc1805614a130194d4b58f6d2"
+                "reference": "d0637ba32f88dc338f3c2b125ecafd0799dae0d5"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/baohx2000/apitude/zipball/c6f0a836319ef72cc1805614a130194d4b58f6d2",
-                "reference": "c6f0a836319ef72cc1805614a130194d4b58f6d2",
+                "url": "https://api.github.com/repos/baohx2000/apitude/zipball/d0637ba32f88dc338f3c2b125ecafd0799dae0d5",
+                "reference": "d0637ba32f88dc338f3c2b125ecafd0799dae0d5",
                 "shasum": ""
             },
             "require": {
@@ -41,7 +41,6 @@
                     "B2k\\Apitude\\": "src/"
                 }
             },
-            "notification-url": "https://packagist.org/downloads/",
             "license": [
                 "MIT"
             ],
@@ -52,7 +51,11 @@
                 }
             ],
             "description": "Yet another API framework",
-            "time": "2015-07-19 20:54:27"
+            "support": {
+                "source": "https://github.com/baohx2000/apitude/tree/master",
+                "issues": "https://github.com/baohx2000/apitude/issues"
+            },
+            "time": "2015-07-26 16:27:28"
         },
         {
             "name": "dbtlr/silex-doctrine-migrations",

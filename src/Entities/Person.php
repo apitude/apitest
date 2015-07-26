@@ -5,12 +5,14 @@ use B2k\Apitude\Entities\User;
 use B2k\Apitude\EntityStubs\StampEntityInterface;
 use B2k\Apitude\EntityStubs\StampEntityTrait;
 use Doctrine\ORM\Mapping as ORM;
+use B2k\Apitude\Annotations\API;
 
 /**
  * Class Person
  * @package Apitest\Entities
  * @ORM\Entity
  * @ORM\Table(name="persons")
+ * @API\Entity\Expose
  */
 class Person implements StampEntityInterface
 {
@@ -21,6 +23,7 @@ class Person implements StampEntityInterface
      * @ORM\Id
      * @ORM\Column(type="integer")
      * @ORM\GeneratedValue
+     * @API\Property\Expose
      */
     private $id;
 

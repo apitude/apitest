@@ -7,6 +7,12 @@
       "email" : "baohx2000@gmail.com"
     }
   ],
+  "repositories" : [
+    {
+      "type": "vcs",
+      "url": "https://github.com/baohx2000/apitude"
+    }
+  ],
   "prefer-stable"     : true,
   "minimum-stability" : "dev",
   "require"           : {

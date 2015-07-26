@@ -49,6 +49,6 @@ return [
     ],
 
     'commands' => [
-        \Apitest\Commands\MakePerson::class => [],
+        \Apitest\Commands\MakePerson::class,
     ]
 ];
