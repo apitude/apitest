@@ -10,13 +10,13 @@
   "repositories" : [
     {
       "type": "vcs",
-      "url": "https://github.com/baohx2000/apitude"
+      "url": "https://github.com/apitude/apitude"
     }
   ],
   "prefer-stable"     : true,
   "minimum-stability" : "dev",
   "require"           : {
-    "baohx2000/apitude" : "dev-master"
+    "apitude/apitude" : "dev-master"
   },
   "autoload"          : {
     "psr-4" : {

@@ -4,20 +4,20 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "edb0b35b3cfb41168e45d8de95fadf69",
+    "hash": "7b67b21dc0a33376f93776b953ef7eb9",
     "packages": [
         {
-            "name": "baohx2000/apitude",
+            "name": "apitude/apitude",
             "version": "dev-master",
             "source": {
                 "type": "git",
-                "url": "https://github.com/baohx2000/apitude.git",
-                "reference": "77a35b1b61a3c6496869c6e3b6efed29f7032ae4"
+                "url": "https://github.com/apitude/apitude.git",
+                "reference": "0e4a373e15ee96e3949878305f3df4fbf0849422"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/baohx2000/apitude/zipball/77a35b1b61a3c6496869c6e3b6efed29f7032ae4",
-                "reference": "77a35b1b61a3c6496869c6e3b6efed29f7032ae4",
+                "url": "https://api.github.com/repos/apitude/apitude/zipball/0e4a373e15ee96e3949878305f3df4fbf0849422",
+                "reference": "0e4a373e15ee96e3949878305f3df4fbf0849422",
                 "shasum": ""
             },
             "require": {
@@ -38,7 +38,7 @@
             "type": "library",
             "autoload": {
                 "psr-4": {
-                    "B2k\\Apitude\\": "src/"
+                    "Apitude\\": "src/"
                 }
             },
             "license": [
@@ -52,10 +52,10 @@
             ],
             "description": "Yet another API framework",
             "support": {
-                "source": "https://github.com/baohx2000/apitude/tree/master",
-                "issues": "https://github.com/baohx2000/apitude/issues"
+                "source": "https://github.com/apitude/apitude/tree/master",
+                "issues": "https://github.com/apitude/apitude/issues"
             },
-            "time": "2015-07-26 22:12:53"
+            "time": "2015-07-29 00:16:35"
         },
         {
             "name": "dbtlr/silex-doctrine-migrations",
@@ -1525,7 +1525,7 @@
     "aliases": [],
     "minimum-stability": "dev",
     "stability-flags": {
-        "baohx2000/apitude": 20
+        "apitude/apitude": 20
     },
     "prefer-stable": true,
     "prefer-lowest": false,
