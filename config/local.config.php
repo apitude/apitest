@@ -1,6 +1,6 @@
 <?php
 
-use Apitude\EntityServices\StampSubscriber;
+use Apitude\Core\EntityServices\StampSubscriber;
 
 return [
     'configuration.services' => [
@@ -21,7 +21,7 @@ return [
             'mappings' => [
                 [
                     'type' => 'annotation',
-                    'namespace' => 'Apitude\Entities',
+                    'namespace' => 'Apitude\Core\Entities',
                     'path' => APP_PATH.'/vendor/apitude/apitude/src/Entities',
                     'use_simple_annotation_reader' => false,
                 ],
