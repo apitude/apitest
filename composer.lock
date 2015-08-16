@@ -12,12 +12,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/apitude/apitude.git",
-                "reference": "70a8ce0c0c178899f540f8d5dab612b1254a4013"
+                "reference": "e085204723aa75a08d2d03406ced1ad0093b3ce1"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/apitude/apitude/zipball/70a8ce0c0c178899f540f8d5dab612b1254a4013",
-                "reference": "70a8ce0c0c178899f540f8d5dab612b1254a4013",
+                "url": "https://api.github.com/repos/apitude/apitude/zipball/e085204723aa75a08d2d03406ced1ad0093b3ce1",
+                "reference": "e085204723aa75a08d2d03406ced1ad0093b3ce1",
                 "shasum": ""
             },
             "require": {
@@ -55,7 +55,7 @@
                 "source": "https://github.com/apitude/apitude/tree/master",
                 "issues": "https://github.com/apitude/apitude/issues"
             },
-            "time": "2015-08-15 19:45:07"
+            "time": "2015-08-16 15:02:30"
         },
         {
             "name": "dbtlr/silex-doctrine-migrations",

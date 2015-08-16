@@ -2,12 +2,16 @@
 namespace Apitest\Provider;
 
 
-use Commands\MakePerson;
+use Apitude\Core\Provider\AbstractServiceProvider;
 use Silex\Application;
 use Silex\ServiceProviderInterface;
 
-class ApitestProvider implements ServiceProviderInterface
+class ApitestProvider extends AbstractServiceProvider implements ServiceProviderInterface
 {
+    public function __construct()
+    {
+        $this->entityFolders['Apitest\Entities'] = realpath(__DIR__.'/../Entities');
+    }
 
     /**
      * Registers services on the given app.
@@ -17,7 +21,7 @@ class ApitestProvider implements ServiceProviderInterface
      */
     public function register(Application $app)
     {
-        // TODO: Implement register() method.
+        parent::register($app);
     }
 
     /**

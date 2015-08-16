@@ -2,7 +2,6 @@
 namespace Apitest\Entities;
 
 use Apitude\Core\Entities\AbstractEntity;
-use Apitude\Core\Entities\User;
 use Apitude\Core\EntityStubs\StampEntityInterface;
 use Apitude\Core\EntityStubs\StampEntityTrait;
 use Doctrine\ORM\Mapping as ORM;
@@ -41,13 +40,6 @@ class Person extends AbstractEntity implements StampEntityInterface
      * @API\Property\Expose()
      */
     private $lastName;
-
-    /**
-     * @var User
-     * @ORM\OneToOne(targetEntity="Apitude\Core\Entities\User")
-     * @ORM\JoinColumn(name="user_id", referencedColumnName="id")
-     */
-    private $user;
 
     /**
      * @return int
@@ -103,29 +95,5 @@ class Person extends AbstractEntity implements StampEntityInterface
     public function getLastName()
     {
         return $this->lastName;
-    }
-
-    /**
-     * Set user
-     *
-     * @param User $user
-     *
-     * @return Person
-     */
-    public function setUser(User $user = null)
-    {
-        $this->user = $user;
-
-        return $this;
-    }
-
-    /**
-     * Get user
-     *
-     * @return User
-     */
-    public function getUser()
-    {
-        return $this->user;
     }
 }
