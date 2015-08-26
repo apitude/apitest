@@ -11,12 +11,17 @@
     {
       "type": "vcs",
       "url": "https://github.com/apitude/apitude"
+    },
+    {
+      "type": "vcs",
+      "url": "https://github.com/apitude/user"
     }
   ],
   "prefer-stable"     : true,
   "minimum-stability" : "dev",
   "require"           : {
-    "apitude/apitude" : "dev-master"
+    "apitude/apitude" : "dev-master",
+    "apitude/user"    : "dev-master"
   },
   "autoload"          : {
     "psr-4" : {
