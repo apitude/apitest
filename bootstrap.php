@@ -14,8 +14,7 @@ if (!defined('APP_PATH')) {
 
 $bs = new \Apitude\Core\Bootstrap();
 $app = $bs->createApplication();
-//$app->register(new \Silex\Provider\SecurityServiceProvider);
-//$app->register(new \Apitude\User\UserServiceProvider);
+$app->register(new \Apitude\User\UserServiceProvider);
 
 // add extra service providers here
 
