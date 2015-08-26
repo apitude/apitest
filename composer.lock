@@ -12,12 +12,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/apitude/apitude.git",
-                "reference": "e085204723aa75a08d2d03406ced1ad0093b3ce1"
+                "reference": "eb4ac3ab42be89d8ef452451f1ad067079714c29"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/apitude/apitude/zipball/e085204723aa75a08d2d03406ced1ad0093b3ce1",
-                "reference": "e085204723aa75a08d2d03406ced1ad0093b3ce1",
+                "url": "https://api.github.com/repos/apitude/apitude/zipball/eb4ac3ab42be89d8ef452451f1ad067079714c29",
+                "reference": "eb4ac3ab42be89d8ef452451f1ad067079714c29",
                 "shasum": ""
             },
             "require": {
@@ -55,7 +55,7 @@
                 "source": "https://github.com/apitude/apitude/tree/master",
                 "issues": "https://github.com/apitude/apitude/issues"
             },
-            "time": "2015-08-16 15:02:30"
+            "time": "2015-08-26 02:16:15"
         },
         {
             "name": "dbtlr/silex-doctrine-migrations",
@@ -1015,16 +1015,16 @@
         },
         {
             "name": "silex/silex",
-            "version": "v1.3.1",
+            "version": "v1.3.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/silexphp/Silex.git",
-                "reference": "0507b772519ab0d9dd258bb39748921229ad5c46"
+                "reference": "833d399eeaa449786d3fa2e533ada293b4e533c9"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/silexphp/Silex/zipball/0507b772519ab0d9dd258bb39748921229ad5c46",
-                "reference": "0507b772519ab0d9dd258bb39748921229ad5c46",
+                "url": "https://api.github.com/repos/silexphp/Silex/zipball/833d399eeaa449786d3fa2e533ada293b4e533c9",
+                "reference": "833d399eeaa449786d3fa2e533ada293b4e533c9",
                 "shasum": ""
             },
             "require": {
@@ -1088,12 +1088,12 @@
                     "email": "igor@wiedler.ch"
                 }
             ],
-            "description": "The PHP micro-framework based on the Symfony2 Components",
+            "description": "The PHP micro-framework based on the Symfony Components",
             "homepage": "http://silex.sensiolabs.org",
             "keywords": [
                 "microframework"
             ],
-            "time": "2015-08-04 10:41:12"
+            "time": "2015-08-24 10:04:48"
         },
         {
             "name": "symfony/console",
