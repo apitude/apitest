@@ -3,13 +3,14 @@ namespace Apitest\Commands;
 
 
 use Apitest\Entities\Person;
+use Apitude\Core\Commands\BaseCommand;
 use Doctrine\ORM\EntityManagerInterface;
 use Knp\Command\Command;
 use Symfony\Component\Console\Input\InputInterface;
 use Symfony\Component\Console\Input\InputOption;
 use Symfony\Component\Console\Output\OutputInterface;
 
-class MakePerson extends Command
+class MakePerson extends BaseCommand
 {
     public function __construct()
     {
