@@ -2,12 +2,17 @@
 namespace Apitest\Provider;
 
 
+use Apitest\Controller\Controller\PersonController;
 use Apitude\Core\Provider\AbstractServiceProvider;
 use Silex\Application;
 use Silex\ServiceProviderInterface;
 
 class ApitestProvider extends AbstractServiceProvider implements ServiceProviderInterface
 {
+    protected $services = [
+        PersonController::class,
+    ];
+
     public function __construct()
     {
         $this->entityFolders['Apitest\Entities'] = realpath(__DIR__.'/../Entities');
@@ -22,6 +27,19 @@ class ApitestProvider extends AbstractServiceProvider implements ServiceProvider
     public function register(Application $app)
     {
         parent::register($app);
+
+        $app->get('/people', PersonController::class.':readList');
+
+        $app->get('/people({id})', PersonController::class.':read')
+            ->assert('id', '\d+');
+
+        $app->post('/people', PersonController::class.':create');
+
+        $app->patch('/people({id})', PersonController::class.':update')
+            ->assert('id', '\d+');
+
+        $app->delete('/people({id})', PersonController::class.':delete')
+            ->assert('id', '\d+');
     }
 
     /**

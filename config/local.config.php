@@ -1,7 +1,5 @@
 <?php
 
-use Apitude\Core\EntityServices\StampSubscriber;
-
 return [
     'configuration.services' => [
         // [class => config]
