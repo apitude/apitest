@@ -13,12 +13,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/apitude/apitude.git",
-                "reference": "4c7793452aa1dbc47d10903e462fba1d46aa3373"
+                "reference": "68a4798b5d422d8991e43b332b02157cfb93534b"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/apitude/apitude/zipball/4c7793452aa1dbc47d10903e462fba1d46aa3373",
-                "reference": "4c7793452aa1dbc47d10903e462fba1d46aa3373",
+                "url": "https://api.github.com/repos/apitude/apitude/zipball/68a4798b5d422d8991e43b332b02157cfb93534b",
+                "reference": "68a4798b5d422d8991e43b332b02157cfb93534b",
                 "shasum": ""
             },
             "require": {
@@ -56,7 +56,7 @@
                 "source": "https://github.com/apitude/apitude/tree/master",
                 "issues": "https://github.com/apitude/apitude/issues"
             },
-            "time": "2015-10-20 17:41:42"
+            "time": "2015-10-20 19:58:15"
         },
         {
             "name": "apitude/user",
