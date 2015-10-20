@@ -1,5 +1,5 @@
 <?php
-namespace Apitest\Controller\Controller;
+namespace Apitest\Controller;
 
 use Apitude\Core\API\Controller\AbstractCrudController;
 
