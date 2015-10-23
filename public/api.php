@@ -1,3 +1,3 @@
 <?php
-$app = require_once '../bootstrap.php';
+$app = require_once realpath(__DIR__.'/..') . '/bootstrap.php';
 $app->run();

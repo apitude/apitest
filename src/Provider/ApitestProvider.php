@@ -1,7 +1,7 @@
 <?php
 namespace Apitest\Provider;
 
-
+use Apitest\Commands\MakePerson;
 use Apitest\Controller\PersonController;
 use Apitude\Core\Provider\AbstractServiceProvider;
 use Silex\Application;
@@ -11,6 +11,10 @@ class ApitestProvider extends AbstractServiceProvider implements ServiceProvider
 {
     protected $services = [
         PersonController::class,
+    ];
+
+    protected $commands = [
+        MakePerson::class,
     ];
 
     public function __construct()
@@ -23,6 +27,7 @@ class ApitestProvider extends AbstractServiceProvider implements ServiceProvider
      *
      * This method should only be used to configure services and parameters.
      * It should not get services.
+     * @param Application $app
      */
     public function register(Application $app)
     {
@@ -48,6 +53,7 @@ class ApitestProvider extends AbstractServiceProvider implements ServiceProvider
      * This method is called after all services are registered
      * and should be used for "dynamic" configuration (whenever
      * a service must be requested).
+     * @param Application $app
      */
     public function boot(Application $app)
     {

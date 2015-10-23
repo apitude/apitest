@@ -8,7 +8,7 @@ use Doctrine\DBAL\Schema\Schema;
 /**
  * Auto-generated Migration: Please modify to your needs!
  */
-class Version20150719085118 extends AbstractMigration
+class Version20151023185508 extends AbstractMigration
 {
     /**
      * @param Schema $schema
@@ -18,8 +18,7 @@ class Version20150719085118 extends AbstractMigration
         // this up() migration is auto-generated, please modify it to your needs
         $this->abortIf($this->connection->getDatabasePlatform()->getName() != 'mysql', 'Migration can only be executed safely on \'mysql\'.');
 
-        $this->addSql('CREATE TABLE users (id INT AUTO_INCREMENT NOT NULL, username VARCHAR(64) NOT NULL, password VARCHAR(128) DEFAULT NULL, PRIMARY KEY(id)) DEFAULT CHARACTER SET utf8 COLLATE utf8_unicode_ci ENGINE = InnoDB');
-        $this->addSql('CREATE TABLE persons (id INT AUTO_INCREMENT NOT NULL, firstName VARCHAR(64) NOT NULL, lastName VARCHAR(64) NOT NULL, PRIMARY KEY(id)) DEFAULT CHARACTER SET utf8 COLLATE utf8_unicode_ci ENGINE = InnoDB');
+        $this->addSql('ALTER TABLE oauth_auth_code_scope DROP INDEX UNIQ_56B5731787ACBFC2, ADD INDEX IDX_56B5731787ACBFC2 (oauth_scope)');
     }
 
     /**
@@ -30,7 +29,6 @@ class Version20150719085118 extends AbstractMigration
         // this down() migration is auto-generated, please modify it to your needs
         $this->abortIf($this->connection->getDatabasePlatform()->getName() != 'mysql', 'Migration can only be executed safely on \'mysql\'.');
 
-        $this->addSql('DROP TABLE users');
-        $this->addSql('DROP TABLE persons');
+        $this->addSql('ALTER TABLE oauth_auth_code_scope DROP INDEX IDX_56B5731787ACBFC2, ADD UNIQUE INDEX UNIQ_56B5731787ACBFC2 (oauth_scope)');
     }
 }

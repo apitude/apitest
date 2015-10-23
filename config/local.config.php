@@ -27,12 +27,13 @@ return [
 
     'service_providers' => [
         \Apitest\Provider\ApitestProvider::class => [],
+        \Apitude\User\UserServiceProvider::class => [],
+        \Apitude\User\OAuth\OAuth2ServiceProvider::class => [],
         // add class names of other service providers you wish to register here
         // as keys, and configuration you wish to be passed to them as the value.
         // example : MyServiceProvider::class => ['configKey' => 37, ...]
     ],
 
     'commands' => [
-        \Apitest\Commands\MakePerson::class,
     ]
 ];
