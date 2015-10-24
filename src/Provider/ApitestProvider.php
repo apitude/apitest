@@ -45,6 +45,8 @@ class ApitestProvider extends AbstractServiceProvider implements ServiceProvider
 
         $app->delete('/people({id})', PersonController::class.'::delete')
             ->assert('id', '\d+');
+
+        $app->get('/authpeople', PersonController::class.'::readList');
     }
 
     /**
@@ -57,5 +59,11 @@ class ApitestProvider extends AbstractServiceProvider implements ServiceProvider
      */
     public function boot(Application $app)
     {
+        $fw = $app['security.firewalls'];
+        $fw['authpeople'] = [
+            'pattern' => '/authpeople',
+            'oauth' => true,
+        ];
+        $app['security.firewalls'] = $fw;
     }
 }

@@ -21,7 +21,7 @@
   "minimum-stability" : "dev",
   "require"           : {
     "apitude/apitude" : "dev-master",
-    "apitude/user"    : "dev-oauth2"
+    "apitude/user"    : "dev-master"
   },
   "autoload"          : {
     "psr-4" : {
