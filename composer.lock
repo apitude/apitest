@@ -13,12 +13,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/apitude/apitude.git",
-                "reference": "3ca324337710ecd440acc7d109995382397c3bdc"
+                "reference": "bb3f26a7137b1f2259de591fb6b1599bd0dadb4e"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/apitude/apitude/zipball/3ca324337710ecd440acc7d109995382397c3bdc",
-                "reference": "3ca324337710ecd440acc7d109995382397c3bdc",
+                "url": "https://api.github.com/repos/apitude/apitude/zipball/bb3f26a7137b1f2259de591fb6b1599bd0dadb4e",
+                "reference": "bb3f26a7137b1f2259de591fb6b1599bd0dadb4e",
                 "shasum": ""
             },
             "require": {
@@ -56,7 +56,7 @@
                 "source": "https://github.com/apitude/apitude/tree/master",
                 "issues": "https://github.com/apitude/apitude/issues"
             },
-            "time": "2015-10-23 21:17:29"
+            "time": "2015-10-26 18:52:22"
         },
         {
             "name": "apitude/user",
@@ -64,12 +64,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/apitude/user.git",
-                "reference": "e3aefda951b7bccacd0e2989ee6f7ce83f34a3e5"
+                "reference": "d6913dc6cc4fd3f4fd5d70e28c41f1ccd85ce1c5"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/apitude/user/zipball/e3aefda951b7bccacd0e2989ee6f7ce83f34a3e5",
-                "reference": "e3aefda951b7bccacd0e2989ee6f7ce83f34a3e5",
+                "url": "https://api.github.com/repos/apitude/user/zipball/d6913dc6cc4fd3f4fd5d70e28c41f1ccd85ce1c5",
+                "reference": "d6913dc6cc4fd3f4fd5d70e28c41f1ccd85ce1c5",
                 "shasum": ""
             },
             "require": {
@@ -101,7 +101,7 @@
                 "source": "https://github.com/apitude/user/tree/master",
                 "issues": "https://github.com/apitude/user/issues"
             },
-            "time": "2015-10-24 00:05:10"
+            "time": "2015-10-26 19:13:28"
         },
         {
             "name": "dbtlr/silex-doctrine-migrations",
