@@ -35,5 +35,22 @@ return [
     ],
 
     'commands' => [
-    ]
+    ],
+
+    'cache.driver' => 'array', // or preferably xcache if you have it installed as it keeps metadata in-memory
+    // You may include a cache.redis array including "host" and "port" if you do not wish to use the default redis
+    // configuration
+    'redis' => [
+        'host' => '127.0.0.1',
+        'port' => 6379
+    ],
+
+    'qless' => [
+        'host' => '127.0.0.1',
+        'port' => 6379
+    ],
+
+    'email' => [
+        'sender' => \Apitude\Core\Email\Service\SimpleSender::class,
+    ],
 ];
